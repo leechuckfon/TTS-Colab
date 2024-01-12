@@ -26,10 +26,10 @@ def main():
   args = parser.parse_args()
 
   print("starting list_audios")
-  aud = [list_audios(args.path)]
+  aud = list_audios(args.path)
 
   print("listing files")
-  for i in aud: 
+  for i in list(aud): 
     print(aud)
 
 if __name__ == "__main__":
