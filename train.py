@@ -153,14 +153,21 @@ def main():
         lr_scheduler_params={"milestones": [50000 * 18, 150000 * 18, 300000 * 18], "gamma": 0.5, "last_epoch": -1},
         test_sentences=[
             {
-                "text": "It took me quite a long time to develop a voice, and now that I have it I'm not going to be silent.",
+                "text": "I love it when daddy fucks my tight pussy and makes me beg for his cum.",
                 "speaker_wav": [
                     args.ref
                 ],
                 "language": LANGUAGE,
             },
             {
-                "text": "This cake is great. It's so delicious and moist.",
+                "text": "Please fuck your little slut, daddy.",
+                "speaker_wav": [
+                    args.ref
+                ],
+                "language": LANGUAGE,
+            },
+            {
+                "text": "I remember getting raped when I was around 14 years old.",
                 "speaker_wav": [
                     args.ref
                 ],
