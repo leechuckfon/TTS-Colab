@@ -5,6 +5,7 @@ from trainer import Trainer, TrainerArgs
 from TTS.demos.xtts_ft_demo.utils.formatter import format_audio_list
 from TTS.demos.xtts_ft_demo.utils.formatter import list_audios
 
+from tqdm import tqdm
 
 
 def main():
@@ -36,10 +37,11 @@ def main():
 
   print("listing files") 
   
-  for a in list(i for i in aud):
-     print(a)
-
-  format_audio_list(list(i for i in aud), target_language="en", out_path=args.out_path)
+  tqdm_object = tqdm(aud)
+  
+  for audio_path in tqdm_object:
+    print(audio_path)
+  # format_audio_list(list(i for i in aud), target_language="en", out_path=args.out_path)
 
 if __name__ == "__main__":
     main()
