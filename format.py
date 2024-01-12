@@ -38,7 +38,7 @@ def main():
   
   print([i for i in aud])
 
-  format_audio_list([i for i in aud], target_language="en", out_path=args.out_path)
+  format_audio_list(aud, target_language="en", out_path=args.out_path)
 
 if __name__ == "__main__":
     main()
