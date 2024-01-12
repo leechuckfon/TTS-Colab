@@ -22,6 +22,12 @@ def main():
         help="Port to run the gradio demo. Default: 5003",
         default="/content/xtts",
   )
+  parser.add_argument(
+        "--out_path",
+        type=str,
+        help="Port to run the gradio demo. Default: 5003",
+        default="/content/dataset",
+  )
 
   args = parser.parse_args()
 
@@ -31,6 +37,8 @@ def main():
   print("listing files") 
   
   print([i for i in aud])
+
+  format_audio_list([i for i in aud], target_language="en", out_path=args.out_path)
 
 if __name__ == "__main__":
     main()
