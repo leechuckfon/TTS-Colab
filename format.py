@@ -37,11 +37,7 @@ def main():
 
   print("listing files") 
   
-  tqdm_object = tqdm(aud)
-  
-  for audio_path in tqdm_object:
-    print(audio_path)
-  # format_audio_list(list(i for i in aud), target_language="en", out_path=args.out_path)
+  format_audio_list(aud, target_language="en", out_path=args.out_path)
 
 if __name__ == "__main__":
     main()
