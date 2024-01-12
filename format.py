@@ -36,7 +36,8 @@ def main():
 
   print("listing files") 
   
-  print(list(i for i in aud))
+  for a in list(i for i in aud):
+     print(a)
 
   format_audio_list(list(i for i in aud), target_language="en", out_path=args.out_path)
 
