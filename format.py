@@ -23,10 +23,12 @@ def main():
         default="/content/xtts",
   )
 
-  args = parser.parse_args();
+  args = parser.parse_args()
 
   aud = list_audios(args.path)
-  print(aud)
+
+  for i in aud: 
+    print(aud)
 
 if __name__ == "__main__":
     main()
