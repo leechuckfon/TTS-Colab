@@ -34,8 +34,6 @@ def main():
 
   print("starting list_audios")
   aud = list_audios(args.path)
-
-  print("listing files") 
   
   format_audio_list(aud, target_language="en", out_path=args.out_path)
 
