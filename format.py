@@ -25,7 +25,7 @@ def main():
 
   args = parser.parse_args();
 
-  format_audio_list(args.path)
+  list_audios(args.path)
 
 if __name__ == "__main__":
     main()
