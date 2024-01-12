@@ -28,9 +28,9 @@ def main():
   print("starting list_audios")
   aud = list_audios(args.path)
 
-  print("listing files")
-  for i in list(aud): 
-    print(aud)
+  print("listing files") 
+  
+  print([i for i in aud])
 
 if __name__ == "__main__":
     main()
