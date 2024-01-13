@@ -120,7 +120,7 @@ def main():
     audio_config = XttsAudioConfig(sample_rate=22050, dvae_sample_rate=22050, output_sample_rate=24000)
     # training parameters config
     config = GPTTrainerConfig(
-        epochs=10,
+        epochs=100,
         output_path=OUT_PATH,
         model_args=model_args,
         run_name=RUN_NAME,
@@ -155,6 +155,13 @@ def main():
         test_sentences=[
             {
                 "text": "I love it when daddy fucks my tight pussy and makes me beg for his cum.",
+                "speaker_wav": [
+                    args.ref
+                ],
+                "language": LANGUAGE,
+            },
+            {
+                "text": "I have sex with anyone I want, any time I want.",
                 "speaker_wav": [
                     args.ref
                 ],
