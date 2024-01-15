@@ -9,7 +9,7 @@ from TTS.tts.layers.xtts.trainer.gpt_trainer import GPTArgs, GPTTrainer, GPTTrai
 from TTS.utils.manage import ModelManager
 
 # Logging parameters
-RUN_NAME = "GPT_XTTS_v2.0_LJSpeech_FT"
+RUN_NAME = "CUSTOM_XTTS"
 PROJECT_NAME = "XTTS_trainer"
 DASHBOARD_LOGGER = "tensorboard"
 LOGGER_URI = None
@@ -20,7 +20,7 @@ OUT_PATH = "/content/training-results/"
 # Training Parameters
 OPTIMIZER_WD_ONLY_ON_WEIGHTS = True  # for multi-gpu training please make it False
 START_WITH_EVAL = True  # if True it will star with evaluation
-BATCH_SIZE = 4  # set here the batch size
+BATCH_SIZE = 6  # set here the batch size
 GRAD_ACUMM_STEPS = 84  # set here the grad accumulation steps
 # Note: we recommend that BATCH_SIZE * GRAD_ACUMM_STEPS need to be at least 252 for more efficient training. You can increase/decrease BATCH_SIZE but then set GRAD_ACUMM_STEPS accordingly.
 
@@ -162,6 +162,27 @@ def main():
             },
             {
                 "text": "I have sex with anyone I want, any time I want.",
+                "speaker_wav": [
+                    args.ref
+                ],
+                "language": LANGUAGE,
+            },
+            {
+                "text": "The biggest cock I've ever taken was a black man's when he raped me in an alley when I was on a date with Emily.",
+                "speaker_wav": [
+                    args.ref
+                ],
+                "language": LANGUAGE,
+            },
+            {
+                "text": "I got fucked so hard my pussy was dripping with cum when she ate me out that night.",
+                "speaker_wav": [
+                    args.ref
+                ],
+                "language": LANGUAGE,
+            },
+            {
+                "text": "I later found out she hired the man so she could suck out his cum out of my pussy that night.",
                 "speaker_wav": [
                     args.ref
                 ],
